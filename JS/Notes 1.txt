@@ -1,0 +1,36 @@
+1.) Unlike Java, Scripts doesnt need to compile to run.
+
+2.) can be used internally or externally'
+
+<script>
+ function onClick() { alert(“Clicked”); }
+ </script>
+
+<script src=“index.js”></script>
+
+3.) JS can display data in 4 ways
+
+document.getElementById(‘text1’).innerHTML = “This is a paragraph” ;
+document.write(‘Hello World.’);// will delete whole HTML and replace it with content inside  '' quotes
+window.alert(‘Hello World.’);
+console.log(‘Hello World.’);
+
+
+4.) JS is loosely coupled
+
+5.) All JS variables must be identified with a unique name called identifier.
+
+Rules for identifiers -
+1. Names can contain letters, digits, the dollar sign (‘$’) and the underscore sign (‘_’).
+2. Names should always begin with a letter.
+3. JavaScript is case-sensitive, i.e., name and Name are different variables.
+4. Reserved JS words cannot be used for an identifier.For ex - let,var,const etc
+5. The best practice is to not keep a name, such as x, y, z, that does not indicate the meaning or 
+significance of that variable. The identifier name should signify the meaning of the variable; for 
+example, name and age.
+
+
+
+
+6.) var city = "Berlin";
+    console.log(city); // Berlin without quotes

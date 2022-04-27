@@ -1,0 +1,83 @@
+primitive data types in JS:-
+
+There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol, and null.	
+
+Strings :-
+
+escape char -- The backlash (\”) or (\’) escape character converts any special character into string characters.
+
+var x = “The nickname \“Red Devils\” is given tothe players playing for Manchester United FC.”;
+var x = “The nickname “Red Devils” is given to the players playing for Manchester United FC.”; (wrong way)
+
+
+string methods:
+
+var str = “Hello World”;
+console.log(str.length); //11
+
+
+
+indexOf() and lastIndexOf(): indexOf() returns the position of the first occurrence of text in a string, whereas 
+lastIndexOf() returns the last position of the occurrence of text in a string. You can even add a second 
+parameter to signify the starting position for the search. If the text is not found in the string, then the value 
+returned is -1.
+ex-
+var str = “I have to go to New York.”;
+console.log(str.indexOf(“to”)); //7
+console.log(str.lastIndexOf(“to”)); //13
+console.log(str.indexOf(“e”, 4)); //5
+console.log(str.indexOf(“Mumbai”)); //-1
+
+
+
+
+slice
+2nd parameter not counted
+
+var str = “I have to go to New York.”; console.log(str.slice(7, 11)); //to g
+var str = “I have to go to New York.”; console.log(str.slice(10)); //go to New York.
+
+
+
+substring(start, end): It is similar to slice(). The only difference is that substring() does not accept negative 
+indices. If you omit the second parameter, then it will extract the rest of the string.
+var str = “I have to go to New York.”; console.log(str.substring(7, 12)); //to go
+
+
+
+• substr() is also similar to slice() and substring(). The difference is that the second parameter is the length 
+of the extracted part.
+• It accepts a negative number in the first parameter, and that will start counting from behind.
+• If the second parameter is not specified, then it will extract the remaining part of the string
+var str = “I have to go to New York.”; console.log(str.substr(10)); //go to New York
+var str = “I have to go to New York.”; console.log(str.substr(7, 5)); //to go
+
+
+
+
+
+replace
+
+var str = “I have to go to New York City in the New York state.”;
+console.log(str.replace(“New York”, “Mumbai”)); //I have to go to Mumbai City in the New York state.
+console.log(str.replace(“NEW YORK”, “Mumbai”)); //case insensitive thats why no chnge
+console.log(str.replace(“/NEW YORK/i”, “Mumbai”)); //I have to go to Mumbai City in the New York state.  // remove case insensitivity 
+console.log(str.replace(“/New York/g”, “Mumbai”)); //I have to go to Mumbai City in the Mumbai state.   //replace all
+
+
+
+
+Number
+
+toFixed().
+
+var  i=10.789;
+i.toFixed(0) //11
+i.toFixed(1) //10.8
+i.toFixed(2) //10.79
+
+
+parseInt(“10”); //10
+parseInt(“10.33”); //10
+parseInt(“10 20 30”); //10
+parseInt(“10 years”); //10
