@@ -1,0 +1,59 @@
+Constructor -- never call API here, State kr do define, will run before mouting,
+   	       props in constructor will be undefined. therefore use cons(props) and super(props)
+		If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for 		your React component.cant call setstate here becoz setstate will work only if component is mounted and cons run before mounting
+
+
+
+
+
+Render --- execute krk show krna, props/state update render will call again
+	   component ready tb bhi call hta h
+
+
+why react hook state runs 1 time extra on same state nd class setstate runs multiple--> it run 1 extrabut not sent it to DOM, 
+
+your state is a primitive value(number, string, boolean, ...), then setting the same value using setState hook won't trigger a rerender. If your state is an Object or Array then it will behave differently.
+
+
+memo hook for pure compoennt
+
+
+
+
+componentDidMount-- api call, no effect of prop nd state chnge, runs only at moumting  only
+
+
+
+componentDidUpdate -- runs after when props/state update(not mount), dont update prop or state inside it without any condn 			nhe to infinite loop......,,, prevState,prevProps,snapshot
+
+		componentDidUpdate() will not be invoked if shouldComponentUpdate() returns false.
+
+		If your component implements the getSnapshotBeforeUpdate() lifecycle (which is rare), the value it returns 			will be passed as a third “snapshot” parameter to componentDidUpdate(). Otherwise this parameter will be 			undefined.
+
+
+
+shouldComponentUpdate --run before render during update, return true or false
+if u use shouldComponentUpdate with purecomponent it will give warning and if we are returning true der then Pure compoent will render for even same values of state/props chnge
+
+
+
+componentWillUnmount---jb b component remove hga dom se(not hide or show from css), complete removal is different than hide/show
+remove setTimeout from that page or other functioanlity which we wanna remove and doesnt get removed automatically when page unmounts
+componentWillUnmount() is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any DOM elements that were created in componentDidMount
+
+
+
+
+mounting -------  constructor --> render ---> componentDidMount
+
+update ----------shouldComponentUpdate --->render-->getSnapshotBeforeUpdate-->componentDidUpdate
+
+unmount --- componentWillUnmount
+
+
+
+
+Mounting : --   Parent Constructor ---> Parent Render starts--> Parent render Ends -->Child Constructor  --> Child Render starts--> Child render Ends --> Child ComponentDidMount ---> Parent ComponentDidMount 
+
+
+updating : ---shouldCompoentUpdate Parent --> Parent Render starts--> Parent render Ends --> shouldCompoentUpdate Child --> Child Render starts--> Child render Ends --> CHild ComponentDidUpdate ---> Parent ComponentDidUpdate

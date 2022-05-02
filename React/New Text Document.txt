@@ -1,0 +1,22 @@
+Class component, FUnction Component
+
+Can a compoennt contains other component inside it ?
+
+export multiple components from same file
+
+default export vs simple export
+
+package.json, package-lock.json
+
+why node-modules not uploaded
+
+npm install vs npm start
+
+how to chnge npm start to npm run sid
+
+props passing as single or object
+
+events in class and function---> dont define funtion inside  return--whats the best way to define inside render or inside class
+
+state,define it, its uses,update it, how it works,++c works fine but why c++ is issue
+arrays,object in class and fucntion state

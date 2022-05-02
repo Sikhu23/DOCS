@@ -1,0 +1,25 @@
+With Hooks we can class component feature like state,pure component, life cycle etc
+
+Hooks always start with "use"
+"use" is reserved for making hooks
+
+
+useState -- work as state for function component
+let [data,setData]= useState("Natsu")
+
+useEffect -- If you’re familiar with React class lifecycle methods, you can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+
+The first will run the effect on mount and whenever the state changes. The clean up will be called on state change and on unmount  of page.(no 2nd parameter vaala useEffect)
+
+The second will only run the effect once on mount and the clean up will only get called on unmount of page.(empty array as 2nd parameter)
+
+The last will run the effect on mount and whenever the isOn state changes. The clean up will be called when isOn changes and on unmount of page.(one value at array 2nd parameter)
+
+
+with no 2nd parameter ---> useEffect will work as didMount and didUpdate and if we use return then willUnmount on unmount of page and statechnge
+with empty 2nd paramter -->useEffect will work as didMount and if we use return then willUnmount on unmount of page
+with one or more values in 2nd paramter -->> useEffect will work as didMount and didUpdate(for 2nd paramter) and if we use return then willUnmount on unmount of page 
+render ---> useEffect(with no 2nd paramater)
+
+
+willUnmount runs earlier than didUpadte or didMount before willUnMount runs before removal of component whereas other two runs after render 
