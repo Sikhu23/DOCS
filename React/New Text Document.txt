@@ -20,3 +20,12 @@ events in class and function---> dont define funtion inside  return--whats the b
 
 state,define it, its uses,update it, how it works,++c works fine but why c++ is issue
 arrays,object in class and fucntion state
+
+
+
+in state during class , the data is not lost if we dont use  ...this.state --> only in 1st level this.state={......}
+but if we have this.state={.....,data:{.....}} and if we dont do  this.setState({data:{...this.state.data,updated value}}
+then data one rest value will be lost
+
+
+but in hook useState we have to give ....this.value else all the value will lost except we are updating
